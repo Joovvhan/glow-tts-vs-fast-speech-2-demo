@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GlowTTS / FastSpeech2 Comparison</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+<body>
+
+    <div class='section'>
+        <h1>
+            The Comparison between GlowTTS and FastSpeech2 on the KSS Dataset 
+        </h1>
+
+        <h4>References</h4>
+        <p>
+        <ul>
+            <li> <a href='https://arxiv.org/abs/2005.11129'>GlowTTS(arXiv:2005.11129)</a></li>
+            <li> <a href='https://github.com/jaywalnut310/glow-tts'>GlowTTS Repository</a></li>
+            <li> <a herf='https://github.com/TensorSpeech/TensorFlowTTS'>TensorFlowTTS</a></li>
+            <li> <a href='https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset/version/2'>KSS Dataset</a></li>
+        </ul>
+        </p>
+    </div>
+
+    <hr>
+
+    <div id='section-1' class='section'>
+
+        <h3>Sentences from the Dataset</h3>
+        <div class='music'>
+            <p>
+                이 수의 십의 자리 숫자는 일의 자리 숫자의 세 배이다. 각 숫자의 합은 8이다. 이 수는?
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_4448.wav' type='audio/mpeg'></audio>
+            
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div>
+        
+        <br>
+        </br>
+    
+        
+        <div class='music'>
+            <p>
+                초현실주의 회화는 어떤 사람에게는 색과 모양을 마구잡이로 섞어 놓은 것처럼 보일 수 있다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2835.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div>
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                우리는 오늘 환경을 보전하기 위해 무엇을 해야 할지 논의하기 위해 이 자리에 모였습니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1805.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                처음 이곳에 이사 왔을 때 걸어서 닿는 거리에 식료품 가게가 있다는 게 참 좋았어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1971.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                저는 귀가 어두운데 다른 사람의 얘기를 아주 잘 들어 준다는 말을 많이 들어왔어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_0219.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                귀하가 우리가 원하는 요건을 갖추고 있다고 생각되시면 서둘러 인턴직에 지원하십시오.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2582.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                한국에서 가장 존경 받는 스님 중 한 명이 법정 스님이 2010년에 세상을 떠났다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3305.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그녀는 기독교 신자가 아닌 사람에게 자신의 믿음을 설명할 때 곧잘 성경을 인용한다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3312.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                부모가 저지르는 큰 실수 중 하나는 자기 아이를 다른 집 아이와 비교하는 것이다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/1/1_0079.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                제가 그 오페라의 주연을 따냈다는 얘기를 들었을 때 저는 정말 믿기지가 않았어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2911.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                여러분은 이곳에서 장미, 백합, 튤립 등 다양한 종류의 꽃들을 보실 수 있습니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_4500.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                혼날까 봐 거짓말을 했는데, 나중에 거짓말을 한 것 때문에 엄마한테 더 혼났어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/4/4_2314.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                최근 복싱이 다이어트에 효과적이라고 알려지면서 복싱을 하는 여자들이 늘고 있어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/4/4_2405.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                국제연합의 공식 언어는 아랍어, 중국어, 영어, 불어, 러시아어, 스페인어이다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1854.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                오늘 이렇게 한국어에 관한 초청 강연을 할 수 있게 되어 영광스럽게 생각합니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2307.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그 가수는 한창 인기가 있을 때 갑자기 더 이상 노래를 하지 않겠다고 선언했다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/4/4_4591.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                저는 낯을 많이 가려서 새로운 사람들에게 마음을 여는 데 많은 시간이 걸려요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_0108.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                보일러가 고장 났다는 초기 신호는 온수가 안 나오거나 난방이 안 될 때입니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2239.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                최근의 설문 조사 결과 응답자의 과반수가 새 규정에 반대하는 것으로 나타났다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2538.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                우리는 외국인 근로자들의 권익을 보호하기 위해 계속해서 최선을 다할 것입니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2570.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                많은 경우 추리 소설에서 배경이나 주인공의 직업은 구성에 있어 중요한 요소다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2896.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그 연극은 5월 1일부터 10월 31일까지 월요일을 제외하고 매일 공연됩니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2910.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                장례를 지내야 한다는 법이 있지는 않다. 장례는 단지 보편적인 작별 의식이다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3283.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그분은 훌륭한 학자인 건 분명하지만, 저는 개인적으로 그분을 좋아하지 않아요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/4/4_2156.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                심사숙고 끝에 귀하를 선발하지 않기로 결정했음을 알려드리게 되어 유감입니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1012.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                몇몇 비양심적인 공무원들이 자신들의 지위를 이용해 뇌물을 받았음이 드러났다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1499.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                저희 매장의 모든 품목이 이번 주에 최고 30퍼센트까지 할인 판매를 합니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1941.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그녀는 자신의 재능을 이용해 명예와 부를 추구하는 데는 아무 관심이 없었다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3166.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                중국에 해외 법인을 설립하고자 한다면 고려해야 할 사항이 몇 가지 있습니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3537.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                A: 그 사람 언제 떠났는지 아세요? B: 글쎄요, 며칠 전인 것 같은데요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3988.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                우리 애는 머리가 나쁜 편은 아니에요. 단지 공부에 관심이 없을 뿐이에요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/2/2_0205.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                비가 오는 날에는 앞유리에 김이 서려 운전 중 시야를 방해할 수 있습니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_0195.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                나는 의사가 자기 가족 중 누군가를 수술하는 것이 비도덕적이라고 생각한다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_1498.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                카드를 분실하거나 도난 당할 경우 즉시 신고해서 카드를 정지시켜야 합니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_2726.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                한국의 주요 수출품에는 전자제품, 기계, 자동차, 철강, 조선 등이 있다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3461.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                당신의 사진을 업로드하고 당신의 관심사를 다른 사람과 공유할 수 있습니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3655.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                우리는 금요일 오후에 떠나 일요일 저녁에 돌아올 수 있을 거라 생각했어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_3994.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                매일 화장을 진하게 하는 사람은 나이가 들어 피부 노화가 올 확률이 크다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_4355.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                기증품이 계속 들어오면서 우리는 저장 공간이 부족하다는 사실을 깨달았어요.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_4370.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                나는 그 사람을 만난 적도 없습니다. 그러므로 이 기사는 말도 안 됩니다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_4873.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                그 사람하고 10분 이상 간 얘기한다는 게 나로서는 여간 힘든 일이 아냐.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/4/4_5451.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+        <br>
+        </br>
+        
+        <div class='music'> <!-- 시작 -->
+            <p>
+                해외로부터 전염병이 유입되어 확산되는 것을 방지하기 위한 노력이 있었다.
+            </p>
+            
+            <h5 align='center'>Ground Truth</h5>
+            <audio preload='metadata' controls><source src='audio/GT/3/3_0693.wav' type='audio/mpeg'></audio>
+
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div> <!-- 끝 -->
+
+
+    </div>
+                            
+    <div id='section-2' class='section'>
+
+        <h3>Longer Sentences</h3>
+        <!--<h4 align='center'>Sentence 1</h4>-->
+        <div class='music'>
+            <p>
+                유구한 역사와 전통에 빛나는 우리 대한국민은 3·1운동으로 건립된 대한민국임시정부의 법통과 
+                불의에 항거한 4·19민주이념을 계승하고, 조국의 민주개혁과 평화적 통일의 사명에 입각하여 
+                정의·인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 
+                자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치·경제·사회·문화의 
+                모든 영역에 있어서 각인의 기회를 균등히 하고, 능력을 최고도로 발휘하게 하며, 
+                자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 
+                밖으로는 항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 
+                행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 8차에 걸쳐 개정된 헌법을 
+                이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다.
+            </p>
+            
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div>
+        
+        <!--<h4 align='center'>Sentence 2</h4>-->
+        <br></br>
+        <div class='music'>
+            <p>
+                우리는 이에 조선이 독립국임과 조선인이 자주민임을 선언한다. 이 선언을 세계 온 나라에 알리어 
+                인류 평등의 크고 바른 도리를 분명히 하며, 이것을 후손들에게 깨우쳐 우리 민족이 자기의 힘으로 
+                살아가는 정당한 권리를 길이 지녀 누리게 하려는 것이다. 반만 년이나 이어 온 우리 역사의 권위에 
+                의지하여 독립을 선언하는 것이며, 이천만 민중의 정성된 마음을 모아서 이 선언을 널리 펴서 
+                밝히는 바이며, 민족의 한결 같은 자유 발전을 위하여 이것을 주장하는 것이며, 
+                누구나 자유와 평등을 누려야 한다는 인류적 양심이 드러남으로 말미암아 온 세계가 올바르게 바뀌는 
+                커다란 기회와 운수에 발맞추어 나아가기 위하여 이를 내세워 보이는 것이니, 이 독립 선언은 하늘의 
+                밝은 명령이며, 민족 자결주의에로 옮아 가는 시대의 큰 형세이며, 온 인류가 함께 살아갈 권리를 
+                실현하려는 정당한 움직임이므로, 천하의 무엇이든지 우리의 이 독립 선언을 가로막고 억누르지 
+                못할 것이다.
+            </p>
+            
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div>
+
+        <!--<h4 align='center'>Sentence 3</h4>-->
+        <br></br>
+        <div class='music'>
+            <p>
+                오늘도 또 우리 수탉이 막 쫓기었다. 내가 점심을 먹고 나무를 하러 갈 양으로 나올 때이었다. 
+                산으로 올라서려니까 등뒤에서 푸드득 놈이 덩저리 작은 우리 수탉을 함부로 해내는 것이다. 
+                그것도 그냥 해내는 것이 아니라 푸드득하고 면두를 쪼고 물러섰다가 좀 사이를 두고 푸드득하고 
+                모가지를 쪼았다. 이렇게 멋을 부려 가며 여지없이 닦아 놓는다. 그러면 이 못생긴 것은 쪼일 
+                적마다 주둥이로 땅을 받으며 그 비명이 킥, 킥, 할 뿐이다. 물론 미처 아물지도 않은 면두를 
+                또 쪼이며 붉은 선혈은 뚝뚝 떨어진다. 이걸 가만히 내려다보자니 내 대강이가 터져서 피가 
+                흐르는 것 같이 두 눈에서 불이 번쩍 난다. 대뜸 지게막대기를 메고 달려들어 점순네 닭을 
+                후려칠까 하다가 생각을 고쳐먹고 헛매질로 떼어만 놓았다.
+            </p>
+            
+            <table border="1" width="100%" align="center">  
+                <th width="50%">GlowTTS</th>
+                <th width="50%">FastSpeech2</th>
+                
+                <tr align = "center">
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                    <td width="50%">
+                        <audio preload='metadata' controls><source src='audio/1/%EC%B4%88%EB%A1%9D.wav' type='audio/mpeg'></audio>
+                    </td>
+                </tr>
+            </table>
+                
+        </div>
+
+
+    </div>         
+                            
+</body>
+</html>
